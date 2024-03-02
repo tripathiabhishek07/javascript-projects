@@ -1,0 +1,127 @@
+/* styling the whole web page */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    /* giving gradient color to the background or container */
+    background: linear-gradient(135deg, rgb(122, 237, 229), rgb(239, 77, 234));
+    padding: 10px;
+}
+
+/* styling the div of to do app */
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+/* stylin the heading of to do app  */
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+/* image or icon styling with h2 */
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+/* styling the add item div */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /*this results in occuping the whole width*/
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+/* styling the input  */
+input{
+    flex: 1;
+    /* removing the border */
+    border: none;
+    /* removing the outline */
+    outline: none;
+    /* giving transparent background so that it adopts the input's color */
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+/* styling the add button */
+button{
+    /* removing the border */
+    border: none;
+    /* removing the outline */
+    outline: none;
+    padding: 10px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    /* setting cursor also  */
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+/* styling the list item which would be added */
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 26px 12px 50px;
+    /* user select specifies whether the text of an element can be selected. */
+    user-select: none;
+    cursor: pointer;
+    /* the relative specifies that the elements inside it will take ul as relative  */
+    position: relative;
+}
+/* just adding a unchecked icon image in the background of ul li */
+ul li::before{
+    content: '';
+    position: absolute;  
+    height: 28px;
+    width: 28px;
+    /* giving this specifies cirular border radius */
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+/* styling the checked instant of the list items */
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+/* specifying the checked image behind the list item , after clicking using js */
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+/* styling the span which is extra element "cross" added after the list item */
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+/* just changing the background color on hover */
+ul li span:hover{
+    background:#edeef0;
+}
+
